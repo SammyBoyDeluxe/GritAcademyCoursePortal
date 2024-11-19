@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    background-color: cornflowerblue;
+
+}
+
+.header, footer{
+    position: sticky;
+    background-color: cornflowerblue;
+    width: 100vw;
+    height: auto;
+
+}
+
+#page-title, h3, p{
+    font-family: "Book Antiqua", "Century Schoolbook", system-ui;
+    color: darkorange;
+}
+
+.nav-bar{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    width:100vw;
+
+}
+.nav-link{
+    font-family: "Book Antiqua", "Century Schoolbook", system-ui;
+    color: darkorange;
+    cursor: pointer;
+    font-size: larger;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vh;
+    opacity: 0.3;
+    .search-and-add-bar{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border: darkblue;
+        border-style: solid;
+        justify-self: flex-start;
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+
+    }
+
+    table{
+        justify-self: center;
+        align-self: center;
+        background-color: lightgray;
+        width: 50vw;
+        td{
+            position: relative;
+
+
+        }
+
+
+    }
+
+
+}

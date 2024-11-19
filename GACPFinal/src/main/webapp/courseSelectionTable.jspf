@@ -1,0 +1,40 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="baller.example.gacpfinal.DAOs.DAOGuest" %>
+<%@ page import="baller.example.gacpfinal.beans.CourseBean" %>
+<table>
+    <tr>
+        <th>  #  </th>
+        <th> Namn </th>
+        <th> YHP </th>
+        <th> Beskrivning </th>
+        <th> Start-datum </th>
+        <th> Slut-datum </th>
+    </tr>
+    <%  DAOGuest daoCourseBean = new DAOGuest();
+        ArrayList<CourseBean> courseBeanArrayList = null;
+        try {
+            courseBeanArrayList = (ArrayList<CourseBean>) daoCourseBean.getAllCourses();
+        } catch (Exception e) {
+            /*If we encounter an error we want to forward that to the error-page*/
+            request.setAttribute("errors","(DAOGuest.getAllCourses()) Error-message in courseSelectionTable.jspf line:17 : "+e.getMessage());
+            request.setAttribute("previousPage","courselist.jsp");
+            /*Sends the request to the error-page for display*/
+            session.getServletContext().getRequestDispatcher("/errorpage.jsp").forward(request,response);
+        }
+        CourseBean[] courseBeanArray = new CourseBean[courseBeanArrayList.size()];
+        courseBeanArray =  courseBeanArrayList.toArray(courseBeanArray);
+
+        for(int i= 0 ; i<courseBeanArrayList.size() ; i++) { %>
+    <tr>
+        <td><%=courseBeanArray[i].getId()%></td>
+        <td><%=courseBeanArray[i].getName()%></td>
+        <td><%=courseBeanArray[i].getYhp()%></td>
+        <td><%=courseBeanArray[i].getDescription()%></td>
+        <td><%=courseBeanArray[i].getStartDate()%></td>
+        <td><%=courseBeanArray[i].getEndDate()%></td>
+    </tr>
+    <%}%>
+
+
+</table>

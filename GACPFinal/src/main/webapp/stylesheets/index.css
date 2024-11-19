@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    background-color: cornflowerblue;
+
+}
+
+
+
+.button{
+    height: 20vh;
+    width: 35vw;
+    z-index: 1;
+}
+
+.background-div*{
+    position: sticky;
+    background-image: url("../imagefolder/Grit-Academy-logo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+}
+
+.main-divs#button-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: dimgray;
+    opacity: 0.3;
+
+
+
+
+}
+#logo-image{
+    width: 100%;
+    height: 100%;
+
+
+}
+.header*{
+    position: fixed;
+    background-color: cornflowerblue;
+    width: 100vw;
+    height: auto;
+
+}
+
+#page-title{
+    font-family: "Book Antiqua", "Century Schoolbook", system-ui;
+    color: darkorange;
+}

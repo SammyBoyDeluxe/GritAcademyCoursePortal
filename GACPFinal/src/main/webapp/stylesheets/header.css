@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: cornflowerblue;
+
+}
+#header{
+    position: sticky;
+    background-color: cornflowerblue;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+
+}
+#page-title{
+    font-family: "Book Antiqua", "Century Schoolbook", system-ui;
+    color: darkorange;
+}
